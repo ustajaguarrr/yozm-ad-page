@@ -149,6 +149,8 @@ main.wrap{padding-top:72px}
 /* ── 목업 공통 ──────────────────────── */
 .preview-box{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px}
 .preview-label{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:var(--teal-dark);margin-bottom:14px}
+.ad-shot-frame{border:2px solid var(--teal);border-radius:8px;overflow:hidden;background:#fff;box-shadow:0 1px 8px rgba(106,36,232,.12)}
+.ad-shot-caption{margin-top:10px;font-size:12.5px;color:var(--ink-3)}
 .preview-label::before{content:"👁";font-size:15px}
 .browser{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff;box-shadow:0 6px 24px rgba(20,30,50,.07)}
 .browser-bar{display:flex;align-items:center;gap:8px;background:#eef1f5;padding:9px 14px;border-bottom:1px solid var(--line)}
@@ -411,27 +413,9 @@ footer a{color:#c9a9ff}
     <h2 class="sec-title">실제 이렇게 <span class="hl">노출됩니다</span></h2>
     <p class="sec-desc">브랜디드 콘텐츠는 요즘IT 메인 화면 피드에 2일간 노출되고, 이후에도 검색과 카테고리를 통해 계속 읽힙니다.</p>
     <div class="preview-box">
-      <div class="preview-label">요즘IT 메인 화면 미리보기</div>
-      <div class="browser">
-        <div class="browser-bar"><div class="dots"><i></i><i></i><i></i></div><span class="url">yozm.wishket.com</span></div>
-        <div class="mock-head"><span class="m-logo"><svg width="14" height="14" style="vertical-align:-2px" aria-hidden="true"><use href="#yz-symbol"/></svg> 요즘IT</span><div class="m-nav"><i></i><i></i><i></i><i></i></div></div>
-        <div class="mock-body">
-          <div class="mock-main">
-            <div class="mail-item"><span class="sk sk-dark thumb"></span><div class="lines"><span class="sk" style="width:85%;height:11px"></span><span class="sk" style="width:60%;height:9px"></span></div></div>
-            <div class="slot slot-active" style="padding:12px"><div style="display:flex;gap:12px;align-items:center;width:100%">
-              <span style="width:64px;height:44px;border-radius:6px;background:var(--teal);opacity:.25;flex-shrink:0"></span>
-              <div style="flex:1;text-align:left"><span style="display:block;font-size:12px">브랜디드 콘텐츠 노출 영역</span><small>메인 화면 2일 노출 · 일반 콘텐츠와 동일한 형태</small></div>
-            </div></div>
-            <div class="mail-item"><span class="sk sk-dark thumb"></span><div class="lines"><span class="sk" style="width:78%;height:11px"></span><span class="sk" style="width:52%;height:9px"></span></div></div>
-            <div class="mail-item"><span class="sk sk-dark thumb"></span><div class="lines"><span class="sk" style="width:82%;height:11px"></span><span class="sk" style="width:64%;height:9px"></span></div></div>
-          </div>
-          <div class="mock-side">
-            <span class="sk" style="height:64px"></span>
-            <span class="sk" style="height:64px"></span>
-            <span class="sk" style="height:64px"></span>
-          </div>
-        </div>
-      </div>
+      <div class="preview-label">요즘IT 메인 화면 · 상단 대표 배너 노출 예시</div>
+      <div class="ad-shot-frame"><img src="assets/branded.png" alt="요즘IT 메인 화면 상단 대표 배너" style="width:100%;height:auto;display:block"></div>
+      <p class="ad-shot-caption">요즘IT 메인 화면 최상단 대표 배너 영역입니다. 브랜디드 콘텐츠는 이 위치와 메인 피드에 2일간 노출됩니다.</p>
     </div>
   </div>
 
@@ -520,27 +504,11 @@ footer a{color:#c9a9ff}
 
     <div class="banner-stage">
       <div class="preview-box">
-        <div class="preview-label" id="bannerPreviewLabel">콘텐츠 페이지 미리보기</div>
-
-        <!-- 콘텐츠 페이지 목업 -->
-        <div class="browser" id="mockContent">
-          <div class="browser-bar"><div class="dots"><i></i><i></i><i></i></div><span class="url">yozm.wishket.com/magazine/detail/…</span></div>
-          <div class="mock-head"><span class="m-logo"><svg width="14" height="14" style="vertical-align:-2px" aria-hidden="true"><use href="#yz-symbol"/></svg> 요즘IT</span><div class="m-nav"><i></i><i></i><i></i><i></i></div></div>
-          <div class="mock-body" style="display:grid;grid-template-columns:1fr 248px;gap:12px">
-            <div class="mock-main" style="overflow:hidden;border-radius:4px"><img src="assets/article.png" alt="콘텐츠 페이지 상세" style="width:100%;height:auto;display:block"></div>
-            <div class="mock-side"><div class="slot slot-active" data-slot="cd1" style="aspect-ratio:248/400;border:2px solid var(--teal)">CD-1<small>248×400</small></div><div class="slot" data-slot="cd2" style="aspect-ratio:248/200;border:2px solid rgba(106,36,232,.3)">CD-2<small>248×200</small></div></div>
-          </div>
+        <div class="preview-label" id="bannerPreviewLabel">실제 노출 화면</div>
+        <div class="ad-shot-frame">
+          <img id="adShotImg" src="assets/cd1.png" alt="배너 실제 노출 화면" style="width:100%;height:auto;display:block;border-radius:8px">
         </div>
-
-        <!-- 랜딩(메인) 페이지 목업 -->
-        <div class="browser" id="mockLanding" style="display:none">
-          <div class="browser-bar"><div class="dots"><i></i><i></i><i></i></div><span class="url">yozm.wishket.com</span></div>
-          <div class="mock-head"><span class="m-logo"><svg width="14" height="14" style="vertical-align:-2px" aria-hidden="true"><use href="#yz-symbol"/></svg> 요즘IT</span><div class="m-nav"><i></i><i></i><i></i><i></i></div></div>
-          <div class="mock-body" style="display:grid;grid-template-columns:1fr 120px;gap:12px">
-            <div class="mock-main" style="overflow:hidden;border-radius:4px"><img src="assets/main.png" alt="랜딩(메인) 페이지" style="width:100%;height:auto;display:block"></div>
-            <div class="mock-side"><div class="slot slot-active" data-slot="ld1" style="min-height:72px;border:2px solid var(--teal)">LD-1</div><div style="height:56px"></div><div class="slot" data-slot="ld2" style="min-height:72px;border:2px solid rgba(106,36,232,.3)">LD-2</div></div>
-          </div>
-        </div>
+        <p class="ad-shot-caption" id="adShotCaption">요즘IT 콘텐츠 상세 페이지 · 우측 사이드바 상단에 실제 노출된 화면입니다.</p>
       </div>
 
       <div class="card banner-info">
@@ -631,23 +599,8 @@ footer a{color:#c9a9ff}
   <div class="section">
     <h2 class="sec-title">실제 이렇게 <span class="hl">노출됩니다</span></h2>
     <div class="preview-box">
-      <div class="preview-label">요즘IT 메인 화면 미리보기</div>
-      <div class="browser">
-        <div class="browser-bar"><div class="dots"><i></i><i></i><i></i></div><span class="url">yozm.wishket.com</span></div>
-        <div class="mock-head"><span class="m-logo"><svg width="14" height="14" style="vertical-align:-2px" aria-hidden="true"><use href="#yz-symbol"/></svg> 요즘IT</span><div class="m-nav"><i></i><i></i><i></i><i></i></div></div>
-        <div class="mock-body">
-          <div class="mock-main">
-            <div class="mail-item"><span class="sk sk-dark thumb"></span><div class="lines"><span class="sk" style="width:85%;height:11px"></span><span class="sk" style="width:60%;height:9px"></span></div></div>
-            <div class="mail-item"><span class="sk sk-dark thumb"></span><div class="lines"><span class="sk" style="width:78%;height:11px"></span><span class="sk" style="width:54%;height:9px"></span></div></div>
-            <div class="mail-item"><span class="sk sk-dark thumb"></span><div class="lines"><span class="sk" style="width:82%;height:11px"></span><span class="sk" style="width:66%;height:9px"></span></div></div>
-          </div>
-          <div class="mock-side">
-            <span class="sk" style="height:44px"></span>
-            <div class="slot slot-active" style="min-height:96px">컬렉션 광고 영역<small>메인 화면 14일 고정 노출<br>기업의 링크 모음 컬렉션</small></div>
-            <span class="sk" style="height:44px"></span>
-          </div>
-        </div>
-      </div>
+      <div class="preview-label">📚 실제 컬렉션 광고 사례 — 클릭해서 열어보세요</div>
+      <div class="edm-examples" id="collectionExamples"></div>
     </div>
   </div>
 
@@ -690,21 +643,9 @@ footer a{color:#c9a9ff}
   <div class="section">
     <h2 class="sec-title">실제 이렇게 <span class="hl">노출됩니다</span></h2>
     <div class="preview-box">
-      <div class="preview-label">요즘IT X 채널 미리보기</div>
-      <div class="tweet">
-        <div class="pin">📌 고정된 게시물 — 5일간 채널 최상단 고정</div>
-        <div class="tweet-head">
-          <span class="avatar">IT</span>
-          <div><b>요즘IT</b><span>@yozmIT · 팔로워 1.2만</span></div>
-        </div>
-        <div class="t-lines">
-          <span class="sk" style="width:96%;height:9px"></span>
-          <span class="sk" style="width:88%;height:9px"></span>
-          <span class="sk" style="width:52%;height:9px"></span>
-        </div>
-        <div class="slot slot-active" style="aspect-ratio:16/9">광고 이미지 + URL 영역<small>텍스트 공백 포함 135자</small></div>
-        <div class="t-actions"><span>💬 댓글</span><span>🔁 리트윗</span><span>❤️ 좋아요</span><span>📊 노출 1만+</span></div>
-      </div>
+      <div class="preview-label">📌 요즘IT X(트위터) 채널 실제 노출 화면</div>
+      <div class="ad-shot-frame" style="max-width:420px;margin:0 auto"><img src="assets/x-post.png" alt="요즘IT X 채널 실제 게시물" style="width:100%;height:auto;display:block"></div>
+      <p class="ad-shot-caption">요즘IT 공식 X 채널에 실제 게시된 화면입니다. 메인 트윗에 5일간 고정 노출됩니다.</p>
     </div>
   </div>
 
@@ -865,6 +806,12 @@ const EDM_EXAMPLES = [
   { label:"LG그램 AI (LG전자)", link:"https://stibee.com/api/v1.0/emails/share/0wVobGQF222AI5kg7AdS6pTX9AGzusc" },
   { label:"Datadog",            link:"https://stibee.com/api/v1.0/emails/share/e7xp0kNbEwTKQ2gLK3HJe2oIFYs_Iq0" },
 ];
+
+/* ── ⑤ 컬렉션 광고 실제 사례 ───────────────────────────────── */
+/*  컬렉션 탭에서 열어볼 수 있는 실제 컬렉션. label·link만 바꾸면 됨. */
+const COLLECTIONS = [
+  { label:"나의 밸런스 노트북, 그램 AI (LG전자)", link:"https://yozm.wishket.com/magazine/collection/68895/" },
+];
 /* ╚══ 편집 구역 끝 ══════════════════════════════════════════╝ */
 
 // 지표를 페이지 전체에 반영
@@ -887,6 +834,12 @@ if (refBody) refBody.innerHTML = REFERENCES.map(r => {
     : r.title;
   return `<tr><td><strong>${r.type}</strong></td><td>${cell}</td></tr>`;
 }).join("");
+
+// 컬렉션 실제 사례 버튼을 렌더링
+const collBox = document.getElementById("collectionExamples");
+if (collBox) collBox.innerHTML = COLLECTIONS.map(c =>
+  `<a class="edm-ex-btn" href="${c.link}" target="_blank" rel="noopener">${c.label} 컬렉션 보기 ↗</a>`
+).join("");
 
 /* ── 탭 전환 ── */
 const tabButtons = document.querySelectorAll(".tab-btn");
@@ -911,26 +864,32 @@ window.addEventListener("hashchange", () => activateTab(location.hash.slice(1), 
 if (location.hash) activateTab(location.hash.slice(1), false);
 
 /* ── 웹 배너 상품 정보 (금액은 위 PRICES에서 자동으로 가져옴) ── */
+/*  shot: 실제 노출 화면 캡처(그 자체가 광고 영역). shotCaption: 캡처 아래 설명 문구. */
 const BANNERS = {
   cd1: { name:"CD-1", best:true,  page:"content", loc:"콘텐츠 페이지 · 우측 사이드바 상단",
          size:"248×400 Pixel", text:"최대 메인 35자 · 서브 40자", file:"JPEG · PNG (최대 1MB)",
-         note:"모든 기사에 노출되는 가장 높은 주목도의 배너입니다." },
+         note:"모든 기사에 노출되는 가장 높은 주목도의 배너입니다.",
+         shot:"assets/cd1.png", shotCaption:"콘텐츠 상세 페이지 우측 사이드바 상단에 실제 노출된 화면입니다." },
   cd2: { name:"CD-2", best:false, page:"content", loc:"콘텐츠 페이지 · 우측 사이드바",
          size:"248×200 Pixel", text:"최대 메인 30자 · 서브 20자", file:"JPEG · PNG (최대 1MB)",
-         note:"CD-1 하단에 노출되는 사이드바 배너입니다." },
+         note:"CD-1 하단에 노출되는 사이드바 배너입니다.",
+         shot:"assets/cd2.png", shotCaption:"콘텐츠 상세 페이지 우측 사이드바(CD-1 하단)에 실제 노출된 화면입니다." },
   cd3: { name:"CD-3", best:false, page:"content", loc:"콘텐츠 페이지 · 본문 하단 가로 배너",
          size:"744×160 Pixel", text:"최대 메인 30자 · 서브 30자", file:"JPEG · PNG (최대 1MB)",
-         note:"본문을 끝까지 읽은 독자에게 자연스럽게 노출됩니다." },
-  ld1: { name:"LD-1", best:true,  page:"landing", loc:"랜딩(메인) 페이지 · 사이드바 상단",
+         note:"본문을 끝까지 읽은 독자에게 자연스럽게 노출됩니다.",
+         shot:"assets/cd3.png", shotCaption:"콘텐츠 상세 페이지 본문 하단에 실제 노출된 가로형 배너입니다." },
+  ld1: { name:"LD-1", best:true,  page:"landing", loc:"랜딩(메인) 페이지 · 콘텐츠 피드 하단",
          size:"이미지 120×72 Pixel", text:"웹 최대 메인 25자 · 서브 25자 · 모바일 20자", file:"투명 배경 PNG (최대 1MB)",
-         note:"메인 화면에 진입한 독자가 놓치기 어려운 위치입니다. 텍스트 형식은 수정할 수 없습니다." },
-  ld2: { name:"LD-2", best:false, page:"landing", loc:"랜딩(메인) 페이지 · 사이드바",
+         note:"메인 화면에 진입한 독자가 놓치기 어려운 위치입니다. 텍스트 형식은 수정할 수 없습니다.",
+         shot:"assets/ld1_crop.png", shotCaption:"랜딩(메인) 페이지 콘텐츠 피드 하단에 실제 노출된 가로형 배너입니다." },
+  ld2: { name:"LD-2", best:false, page:"landing", loc:"랜딩(메인) 페이지 · 하단",
          size:"이미지 120×72 Pixel", text:"웹 최대 메인 25자 · 서브 25자 · 모바일 20자", file:"투명 배경 PNG (최대 1MB)",
-         note:"합리적인 단가로 메인 화면에 노출됩니다. 텍스트 형식은 수정할 수 없습니다." },
+         note:"합리적인 단가로 메인 화면에 노출됩니다. 텍스트 형식은 수정할 수 없습니다.",
+         shot:"assets/ld2_crop.png", shotCaption:"랜딩(메인) 페이지 하단에 실제 노출된 가로형 배너입니다." },
 };
 
-const mockContent = document.getElementById("mockContent");
-const mockLanding = document.getElementById("mockLanding");
+const adShotImg = document.getElementById("adShotImg");
+const adShotCaption = document.getElementById("adShotCaption");
 
 function selectBanner(key) {
   const b = BANNERS[key];
@@ -938,11 +897,10 @@ function selectBanner(key) {
   // 칩 & 표 행 활성화
   document.querySelectorAll("#bannerChips .b-chip").forEach(c => c.classList.toggle("active", c.dataset.banner === key));
   document.querySelectorAll(".price-table tr.clickable").forEach(r => r.classList.toggle("row-active", r.dataset.banner === key));
-  // 목업 페이지 전환 + 슬롯 하이라이트
-  mockContent.style.display = b.page === "content" ? "" : "none";
-  mockLanding.style.display = b.page === "landing" ? "" : "none";
-  document.getElementById("bannerPreviewLabel").textContent = b.page === "content" ? "콘텐츠 페이지 미리보기" : "랜딩(메인) 페이지 미리보기";
-  document.querySelectorAll(".slot[data-slot]").forEach(s => s.classList.toggle("slot-active", s.dataset.slot === key));
+  // 실제 노출 화면 캡처 전환
+  adShotImg.src = b.shot;
+  adShotImg.alt = b.name + " 실제 노출 화면";
+  adShotCaption.textContent = b.shotCaption;
   // 정보 패널
   document.getElementById("bInfoName").childNodes[0].textContent = b.name + " ";
   document.getElementById("bInfoBest").style.display = b.best ? "" : "none";
@@ -956,7 +914,6 @@ function selectBanner(key) {
 }
 document.querySelectorAll("#bannerChips .b-chip").forEach(c => c.addEventListener("click", () => selectBanner(c.dataset.banner)));
 document.querySelectorAll(".price-table tr.clickable").forEach(r => r.addEventListener("click", () => selectBanner(r.dataset.banner)));
-document.querySelectorAll(".slot[data-slot]").forEach(s => s.addEventListener("click", () => selectBanner(s.dataset.slot)));
 selectBanner("cd1");
 
 /* ── 뉴스레터 목업 토글 ── */
@@ -976,12 +933,14 @@ const NL_VIEWS = {
       <div class="slot slot-active" style="min-height:220px">단독 eDM — 메일 전체가 광고 영역<small>콘텐츠 소개 · 고객 설문 · 링크 묶음 등 자유 구성<br>요즘IT 뉴스레터 담당자가 직접 기획 · 편집</small></div>` + edmExamplesHtml
   }
 };
-document.querySelectorAll("#nlToggle button").forEach(btn => btn.addEventListener("click", () => {
-  document.querySelectorAll("#nlToggle button").forEach(b => b.classList.toggle("active", b === btn));
-  const v = NL_VIEWS[btn.dataset.nl];
+function selectNlView(nlKey) {
+  const v = NL_VIEWS[nlKey];
+  document.querySelectorAll("#nlToggle button").forEach(b => b.classList.toggle("active", b.dataset.nl === nlKey));
   document.getElementById("nlSubject").textContent = v.subject;
   document.getElementById("nlBody").innerHTML = v.html;
-}));
+}
+document.querySelectorAll("#nlToggle button").forEach(btn => btn.addEventListener("click", () => selectNlView(btn.dataset.nl)));
+selectNlView("pickit");
 </script>
 </body>
 </html>
