@@ -202,6 +202,10 @@ main.wrap{padding-top:72px}
 .nl-toggle{display:inline-flex;background:#eef1f5;border-radius:10px;padding:4px;gap:4px;margin-bottom:16px}
 .nl-toggle button{font:inherit;font-size:13.5px;font-weight:700;border:0;background:none;color:var(--ink-2);padding:7px 16px;border-radius:8px;cursor:pointer}
 .nl-toggle button.active{background:#fff;color:var(--navy);box-shadow:0 1px 4px rgba(20,30,50,.12)}
+.edm-examples{margin-top:14px;display:flex;flex-direction:column;gap:8px}
+.edm-ex-label{font-size:12.5px;font-weight:700;color:var(--ink-2);margin-bottom:2px}
+.edm-ex-btn{display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:13.5px;font-weight:700;color:var(--teal-dark);background:var(--teal-soft);border:1px solid #ddc9fb;border-radius:10px;padding:11px 14px;transition:all .15s}
+.edm-ex-btn:hover{background:var(--teal);color:#fff;border-color:var(--teal)}
 
 /* SNS 목업 */
 .tweet{border:1px solid var(--line);border-radius:14px;background:#fff;padding:18px 20px;box-shadow:0 6px 24px rgba(20,30,50,.07);max-width:460px}
@@ -522,24 +526,9 @@ footer a{color:#c9a9ff}
         <div class="browser" id="mockContent">
           <div class="browser-bar"><div class="dots"><i></i><i></i><i></i></div><span class="url">yozm.wishket.com/magazine/detail/…</span></div>
           <div class="mock-head"><span class="m-logo"><svg width="14" height="14" style="vertical-align:-2px" aria-hidden="true"><use href="#yz-symbol"/></svg> 요즘IT</span><div class="m-nav"><i></i><i></i><i></i><i></i></div></div>
-          <div class="mock-body">
-            <div class="mock-main">
-              <span class="sk sk-dark" style="width:78%;height:16px"></span>
-              <span class="sk" style="width:36%;height:9px"></span>
-              <span class="sk" style="width:100%;height:8px;margin-top:8px"></span>
-              <span class="sk" style="width:96%;height:8px"></span>
-              <span class="sk" style="width:99%;height:8px"></span>
-              <span class="sk" style="width:88%;height:8px"></span>
-              <span class="sk" style="width:97%;height:8px"></span>
-              <span class="sk" style="width:60%;height:8px"></span>
-              <div class="slot" data-slot="cd3" style="aspect-ratio:744/160;margin-top:8px">CD-3<small>744×160 · 본문 하단</small></div>
-              <span class="sk" style="width:94%;height:8px;margin-top:4px"></span>
-              <span class="sk" style="width:70%;height:8px"></span>
-            </div>
-            <div class="mock-side">
-              <div class="slot" data-slot="cd1" style="aspect-ratio:248/400">CD-1<small>248×400 · 우측 상단</small></div>
-              <div class="slot" data-slot="cd2" style="aspect-ratio:248/200">CD-2<small>248×200</small></div>
-            </div>
+          <div class="mock-body" style="display:grid;grid-template-columns:1fr 248px;gap:12px">
+            <div class="mock-main" style="overflow:hidden;border-radius:4px"><img src="assets/article.png" alt="콘텐츠 페이지 상세" style="width:100%;height:auto;display:block"></div>
+            <div class="mock-side"><div class="slot slot-active" data-slot="cd1" style="aspect-ratio:248/400;border:2px solid var(--teal)">CD-1<small>248×400</small></div><div class="slot" data-slot="cd2" style="aspect-ratio:248/200;border:2px solid rgba(106,36,232,.3)">CD-2<small>248×200</small></div></div>
           </div>
         </div>
 
@@ -547,19 +536,9 @@ footer a{color:#c9a9ff}
         <div class="browser" id="mockLanding" style="display:none">
           <div class="browser-bar"><div class="dots"><i></i><i></i><i></i></div><span class="url">yozm.wishket.com</span></div>
           <div class="mock-head"><span class="m-logo"><svg width="14" height="14" style="vertical-align:-2px" aria-hidden="true"><use href="#yz-symbol"/></svg> 요즘IT</span><div class="m-nav"><i></i><i></i><i></i><i></i></div></div>
-          <div class="mock-body">
-            <div class="mock-main">
-              <div class="mail-item"><span class="sk sk-dark thumb"></span><div class="lines"><span class="sk" style="width:85%;height:11px"></span><span class="sk" style="width:60%;height:9px"></span></div></div>
-              <div class="mail-item"><span class="sk sk-dark thumb"></span><div class="lines"><span class="sk" style="width:78%;height:11px"></span><span class="sk" style="width:54%;height:9px"></span></div></div>
-              <div class="mail-item"><span class="sk sk-dark thumb"></span><div class="lines"><span class="sk" style="width:82%;height:11px"></span><span class="sk" style="width:66%;height:9px"></span></div></div>
-              <div class="mail-item"><span class="sk sk-dark thumb"></span><div class="lines"><span class="sk" style="width:74%;height:11px"></span><span class="sk" style="width:58%;height:9px"></span></div></div>
-            </div>
-            <div class="mock-side">
-              <div class="slot" data-slot="ld1" style="min-height:64px">LD-1<small>이미지 120×72 + 텍스트</small></div>
-              <span class="sk" style="height:56px"></span>
-              <div class="slot" data-slot="ld2" style="min-height:64px">LD-2<small>이미지 120×72 + 텍스트</small></div>
-              <span class="sk" style="height:56px"></span>
-            </div>
+          <div class="mock-body" style="display:grid;grid-template-columns:1fr 120px;gap:12px">
+            <div class="mock-main" style="overflow:hidden;border-radius:4px"><img src="assets/main.png" alt="랜딩(메인) 페이지" style="width:100%;height:auto;display:block"></div>
+            <div class="mock-side"><div class="slot slot-active" data-slot="ld1" style="min-height:72px;border:2px solid var(--teal)">LD-1</div><div style="height:56px"></div><div class="slot" data-slot="ld2" style="min-height:72px;border:2px solid rgba(106,36,232,.3)">LD-2</div></div>
           </div>
         </div>
       </div>
@@ -878,6 +857,14 @@ const REFERENCES = [
   { type:"제품 개발 과정 (제휴)", title:"쿠팡은 디자인 시스템을 어떻게 구축했을까?", link:"https://yozm.wishket.com/magazine/detail/2045/" },
   { type:"자체 인터뷰 (제휴)",  title:"초거대 AI 시대, 대체불가 개발자로 살아남기", link:"https://yozm.wishket.com/magazine/detail/2477/" },
 ];
+
+/* ── ④ 단독 eDM 실제 발송 사례 ─────────────────────────────── */
+/*  뉴스레터 탭 "단독 eDM" 미리보기에서 열어볼 수 있는 실제 메일. */
+/*  줄을 추가/삭제하거나 label·link만 바꾸면 됩니다.              */
+const EDM_EXAMPLES = [
+  { label:"LG그램 AI (LG전자)", link:"https://stibee.com/api/v1.0/emails/share/0wVobGQF222AI5kg7AdS6pTX9AGzusc" },
+  { label:"Datadog",            link:"https://stibee.com/api/v1.0/emails/share/e7xp0kNbEwTKQ2gLK3HJe2oIFYs_Iq0" },
+];
 /* ╚══ 편집 구역 끝 ══════════════════════════════════════════╝ */
 
 // 지표를 페이지 전체에 반영
@@ -973,20 +960,20 @@ document.querySelectorAll(".slot[data-slot]").forEach(s => s.addEventListener("c
 selectBanner("cd1");
 
 /* ── 뉴스레터 목업 토글 ── */
+const edmExamplesHtml = EDM_EXAMPLES.length ? `
+      <div class="edm-examples">
+        <p class="edm-ex-label">📨 실제 발송된 eDM 사례 — 클릭해서 열어보세요</p>
+        ${EDM_EXAMPLES.map(e => `<a class="edm-ex-btn" href="${e.link}" target="_blank" rel="noopener">${e.label} 광고 메일 보기 ↗</a>`).join("")}
+      </div>` : "";
 const NL_VIEWS = {
   pickit: {
     subject: "📮 요즘IT | 이번 주 IT 실무자가 꼭 봐야 할 콘텐츠",
-    html: `
-      <div class="mail-brand">요즘IT Pick-IT</div>
-      <div class="mail-item"><span class="sk sk-dark thumb"></span><div class="lines"><span class="sk" style="width:88%;height:10px"></span><span class="sk" style="width:64%;height:8px"></span></div></div>
-      <div class="mail-item"><span class="sk sk-dark thumb"></span><div class="lines"><span class="sk" style="width:76%;height:10px"></span><span class="sk" style="width:58%;height:8px"></span></div></div>
-      <div class="mail-item"><span class="sk sk-dark thumb"></span><div class="lines"><span class="sk" style="width:82%;height:10px"></span><span class="sk" style="width:50%;height:8px"></span></div></div>
-      <div class="slot slot-active" style="aspect-ratio:1260/580">Pick-IT 배너 광고 영역<small>이미지 1260×580 + 텍스트 + CTA 버튼 · 에디터가 편집</small></div>`
+    html: `<img src="assets/newsletter.png" alt="Pick-IT 뉴스레터" style="width:100%;height:auto;display:block;border-radius:6px">`
   },
   edm: {
     subject: "💌 [브랜드명] 구독자 전원에게 보내는 단독 메일",
     html: `
-      <div class="slot slot-active" style="min-height:280px">단독 eDM — 메일 전체가 광고 영역<small>콘텐츠 소개 · 고객 설문 · 링크 묶음 등 자유 구성<br>요즘IT 뉴스레터 담당자가 직접 기획 · 편집</small></div>`
+      <div class="slot slot-active" style="min-height:220px">단독 eDM — 메일 전체가 광고 영역<small>콘텐츠 소개 · 고객 설문 · 링크 묶음 등 자유 구성<br>요즘IT 뉴스레터 담당자가 직접 기획 · 편집</small></div>` + edmExamplesHtml
   }
 };
 document.querySelectorAll("#nlToggle button").forEach(btn => btn.addEventListener("click", () => {
