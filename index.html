@@ -283,6 +283,7 @@ footer a{color:#c9a9ff}
     <button class="tab-btn" data-tab="collection">컬렉션 광고</button>
     <button class="tab-btn" data-tab="sns">SNS 광고</button>
     <button class="tab-btn" data-tab="category">카테고리 브랜디드</button>
+    <button class="tab-btn" data-tab="event">세미나·이벤트</button>
   </nav>
 </div>
 
@@ -695,6 +696,61 @@ footer a{color:#c9a9ff}
 
 </section>
 
+<!-- ═══════════════ 세미나·이벤트 ═══════════════ -->
+<section class="tab-panel" id="panel-event">
+
+  <div class="section">
+    <!-- ▼ 헤드카피 — 문구 수정 가능 -->
+    <h2 class="sec-title">우리 오디언스에 맞춘 <span class="hl">세미나·이벤트</span>를 함께 만드세요</h2>
+    <p class="sec-desc">요즘IT의 IT 실무자 오디언스를 타깃으로, 브랜드에 맞는 주제·키워드로 세미나를 설계하고 공동주최·스폰서십으로 운영합니다. 기획부터 모객, 콘텐츠화까지 함께합니다.</p>
+    <div class="grid grid-2">
+      <div class="card product">
+        <div class="p-head"><h3>세미나 공동주최</h3><span class="badge badge-teal">기획·운영 전담</span></div>
+        <div class="price-line"><span class="now">별도 협의</span><span class="unit">규모 · 형식에 따라 견적</span></div>
+        <ul class="feat">
+          <li>타깃 오디언스를 정의하고 브랜드 메시지에 맞는 <strong>주제·키워드 기획</strong></li>
+          <li>요즘IT 채널로 <strong>타깃 모객</strong> (뉴스레터 · 웹 · SNS · 슬랙봇)</li>
+          <li>연사 섭외 · 세션 구성 · 현장/온라인 운영 대행</li>
+          <li>세미나 내용을 <strong>콘텐츠로 발행</strong>(리캡 아티클 등)해 사후에도 지속 노출</li>
+          <li>결과 보고 : 신청 · 참석자 수 · 리드 · 콘텐츠 조회 수</li>
+        </ul>
+        <p class="note">오프라인 + 온라인 하이브리드 진행 가능</p>
+      </div>
+      <div class="card product">
+        <div class="p-head"><h3>세미나 스폰서십</h3><span class="badge badge-teal">부담 없는 참여</span></div>
+        <div class="price-line"><span class="now">별도 협의</span><span class="unit">스폰서 등급별 견적</span></div>
+        <ul class="feat">
+          <li>요즘IT가 기획한 세미나에 <strong>스폰서 · 공동주최로 참여</strong></li>
+          <li>발표 세션 · 브랜드 부스 · 로고 노출 · 참가자 리드 제공 등</li>
+          <li>장소(venue) · 리워드 스폰서십 등 유연한 형태</li>
+          <li>세미나 리캡 콘텐츠에 브랜드 노출</li>
+        </ul>
+        <p class="note">진행 예정 세미나 라인업은 별도 안내</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <!-- ▼ 헤드카피 — 문구 수정 가능 -->
+    <h2 class="sec-title">이렇게 <span class="hl">진행됩니다</span></h2>
+    <div class="grid grid-3">
+      <div class="card goal"><span class="icon">🎯</span><h3>1. 오디언스 · 키워드 정의</h3><p>브랜드 목표에 맞는 IT 오디언스(직군 · 관심사)를 특정하고, 반응할 주제 · 키워드를 잡습니다.</p></div>
+      <div class="card goal"><span class="icon">🗓️</span><h3>2. 세미나 설계 · 모객</h3><p>연사와 세션을 구성하고, 요즘IT 채널로 타깃 오디언스를 모읍니다.</p></div>
+      <div class="card goal"><span class="icon">📣</span><h3>3. 운영 · 콘텐츠화</h3><p>현장/온라인 운영 후, 세미나 내용을 콘텐츠로 남겨 지속 노출 · 확산합니다.</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <!-- ▼ 헤드카피 — 문구 수정 가능 -->
+    <h2 class="sec-title">실제 <span class="hl">진행 사례</span></h2>
+    <div class="preview-box">
+      <div class="preview-label">📅 실제 세미나 사례 — 클릭해서 열어보세요</div>
+      <div class="edm-examples" id="seminarExamples"></div>
+    </div>
+  </div>
+
+</section>
+
 <!-- ═══════════════ 맞춤형 패키지 ═══════════════ -->
 <section class="custom-pkg">
   <div>
@@ -802,6 +858,12 @@ const EDM_EXAMPLES = [
 const COLLECTIONS = [
   { label:"나의 밸런스 노트북, 그램 AI (LG전자)", link:"https://yozm.wishket.com/magazine/collection/68895/" },
 ];
+
+/* ── ⑥ 세미나·이벤트 실제 사례 ─────────────────────────────── */
+/*  세미나 탭에서 열어볼 수 있는 실제 세미나. label·link만 바꾸면 됨. */
+const SEMINARS = [
+  { label:"GEO 팩트체크 세미나 (with Liner)", link:"https://yozm.wishket.com/magazine/detail/3743/" },
+];
 /* ╚══ 편집 구역 끝 ══════════════════════════════════════════╝ */
 
 // 지표를 페이지 전체에 반영
@@ -829,6 +891,12 @@ if (refBody) refBody.innerHTML = REFERENCES.map(r => {
 const collBox = document.getElementById("collectionExamples");
 if (collBox) collBox.innerHTML = COLLECTIONS.map(c =>
   `<a class="edm-ex-btn" href="${c.link}" target="_blank" rel="noopener">${c.label} 컬렉션 보기 ↗</a>`
+).join("");
+
+// 세미나 실제 사례 버튼을 렌더링
+const semBox = document.getElementById("seminarExamples");
+if (semBox) semBox.innerHTML = SEMINARS.map(s =>
+  `<a class="edm-ex-btn" href="${s.link}" target="_blank" rel="noopener">${s.label} 보기 ↗</a>`
 ).join("");
 
 /* ── 탭 전환 ── */
