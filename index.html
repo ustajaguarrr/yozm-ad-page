@@ -5,6 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>요즘IT 광고상품 소개</title>
 <meta name="description" content="34만 IT 실무자가 보는 국내 최대 IT 매거진 요즘IT의 광고 상품을 소개합니다.">
+<!-- 공유 미리보기 (카카오톡 · 슬랙 · SNS) -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="요즘IT 광고상품 소개서 · 2026 UPDATE">
+<meta property="og:description" content="34만 IT 실무자에게 브랜드를 정확하게. 콘텐츠 · 뉴스레터 · 배너 · SNS · 세미나까지 요즘IT의 광고 상품을 소개합니다.">
+<meta property="og:url" content="https://ustajaguarrr.github.io/yozm-ad-page/">
+<meta property="og:image" content="https://ustajaguarrr.github.io/yozm-ad-page/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <style>
 :root{
@@ -213,6 +222,9 @@ main.wrap{padding-top:72px}
 .edm-ex-label{font-size:12.5px;font-weight:700;color:var(--ink-2);margin-bottom:2px}
 .edm-ex-btn{display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:13.5px;font-weight:700;color:var(--teal-dark);background:var(--teal-soft);border:1px solid #ddc9fb;border-radius:10px;padding:11px 14px;transition:all .15s}
 .edm-ex-btn:hover{background:var(--teal);color:#fff;border-color:var(--teal)}
+.adv-strip{display:flex;flex-wrap:wrap;gap:8px}
+.adv-chip{display:inline-flex;align-items:center;padding:7px 15px;background:#fff;border:1px solid var(--line);border-radius:20px;font-size:13.5px;font-weight:700;color:var(--ink-2);white-space:nowrap}
+.views-badge{display:inline-block;margin-left:6px;padding:1px 8px;background:var(--teal-soft);color:var(--teal-dark);border-radius:10px;font-size:11.5px;font-weight:800;white-space:nowrap}
 
 /* SNS 목업 */
 .tweet{border:1px solid var(--line);border-radius:14px;background:#fff;padding:18px 20px;box-shadow:0 6px 24px rgba(20,30,50,.07);max-width:460px}
@@ -264,7 +276,7 @@ footer a{color:#c9a9ff}
     <span class="eyebrow">요즘IT 광고상품 소개서 · 2026 UPDATE</span>
     <!-- ▼ 헤드카피(대표 문구) — 아래 텍스트를 직접 고치면 됩니다. <em>…</em> 안은 강조색으로 표시됩니다 -->
     <h1><em data-metric="mau">34만</em> IT 실무자에게<br>브랜드를 정확하게 알리세요</h1>
-    <p>IT 이슈와 트렌드에 민감한 현업 실무진이 모이는 국내 최대 IT 매거진, 요즘IT의 광고 상품을 소개합니다.</p>
+    <p>현직 IT 종사자만을 정확하게 타겟팅할 수 있는 유일한 매체, 국내 최대 IT 매거진 요즘IT의 광고 상품을 소개합니다.</p>
     <div class="hero-stats">
       <div class="hs"><b data-metric="mau">34만</b><span>월간 사용자 수</span></div>
       <div class="hs"><b data-metric="pv">70만</b><span>월간 페이지 뷰</span></div>
@@ -344,6 +356,13 @@ footer a{color:#c9a9ff}
   </div>
 
   <div class="section">
+    <!-- ▼ 헤드카피 — 문구 수정 가능 (브랜드 목록은 편집 구역 ADVERTISERS에서) -->
+    <h2 class="sec-title">이미 <span class="hl">이런 브랜드</span>가 요즘IT와 함께했습니다</h2>
+    <div class="adv-strip" id="advertiserChips"></div>
+    <p class="note" style="margin-top:12px">* 대행사 집행 사례 포함 · 표기 순서는 무관합니다</p>
+  </div>
+
+  <div class="section">
     <h2 class="sec-title">목적에 맞는 광고 상품을 <span class="hl">추천</span>해 드립니다</h2>
     <p class="sec-desc">아래 카드의 상품명을 누르면 해당 상품 소개로 바로 이동합니다.</p>
     <div class="grid grid-4">
@@ -388,6 +407,7 @@ footer a{color:#c9a9ff}
           <li>1~2회 미팅으로 스토리 발굴 · 컨설팅</li>
           <li>요즘IT 메인 화면 <strong>2일 노출</strong></li>
           <li>요즘IT SNS 채널(페이스북 · X · 링크드인) 업로드</li>
+          <li>집행 콘텐츠 조회 수 <strong>3.2K ~ 58.2K</strong> — 구글 검색 · AI 오버뷰 노출로 게재 후에도 계속 읽힙니다</li>
           <li>조회 수 · 좋아요 · 댓글 · 스크랩 결과 보고</li>
         </ul>
         <p class="note">제작 가능 콘텐츠 : 프로덕트 TMI / 담당 팀 · 리더 인터뷰 / 조직 문화 및 서비스 홍보</p>
@@ -409,7 +429,7 @@ footer a{color:#c9a9ff}
   <div class="section">
     <h2 class="sec-title">콘텐츠 광고가 <span class="hl">강력한 이유</span></h2>
     <div class="grid grid-3">
-      <div class="card goal"><span class="icon">🔍</span><h3>검색 상위 노출 (SEO)</h3><p>키워드에 따라 <strong>구글 검색 결과 1페이지</strong>에 노출됩니다. 예) 제미나이, 마이리얼트립 AI, 토스 프로덕트 브랜딩, 쏘카 프로덕트 등</p></div>
+      <div class="card goal"><span class="icon">🔍</span><h3>검색 · AI 오버뷰 노출</h3><p>키워드에 따라 <strong>구글 검색 결과 1페이지</strong>와 <strong>구글 AI 오버뷰</strong>에 노출됩니다. 예) 제미나이, 마이리얼트립 AI, 토스 프로덕트 브랜딩, 쏘카 프로덕트 등</p></div>
       <div class="card goal"><span class="icon">🧲</span><h3>채용 브랜딩 타깃 밀집</h3><p>카카오, LG U+ 등 <b data-metric="slackTeams">2,000팀+</b>이 슬랙봇으로 요즘IT를 받아보고, 60여 개 기업 기술 블로그와 제휴되어 IT 인재 접근성이 높습니다.</p></div>
       <div class="card goal"><span class="icon">📡</span><h3>다채널 동시 확산</h3><p>데일리레터 · 주간 뉴스레터(구독자 <b data-metric="nlSubs">8만+</b>) · 슬랙봇 · X(팔로워 <b data-metric="xFollowers">1.2만</b>) · 링크드인 · 페이스북으로 즉시 전달됩니다.</p></div>
     </div>
@@ -465,7 +485,7 @@ footer a{color:#c9a9ff}
           <li>요즘IT 구독자 <strong>전원에게 보내는 단독 메일</strong> 배정</li>
           <li>콘텐츠 소개, 고객 설문, 링크 묶음 등 자유로운 구성</li>
           <li>요즘IT 뉴스레터 담당자가 직접 기획 · 편집</li>
-          <li>결과 보고 : 뉴스레터 오픈율 · 배너 클릭률</li>
+          <li>결과 보고 : 오픈율 · 클릭률</li>
         </ul>
         <p class="note">주 1건만 진행 (상황에 따라 조정 가능) · 광고 집행 시점 2주 전까지 예약 필요</p>
       </div>
@@ -561,7 +581,7 @@ footer a{color:#c9a9ff}
         </tbody>
       </table></div>
       <ul class="note">
-        <li>* 웹 배너 광고 활성화 유도 할인가, 28일 게재 기준, VAT 별도</li>
+        <li>* 2026 프로모션 단가, 28일 게재 기준, VAT 별도</li>
         <li>모든 배너 및 텍스트 광고는 롤링 방식으로 노출됩니다.</li>
         <li>모든 광고 소재는 광고주 제작이 원칙입니다.</li>
         <li>결과 보고 : 노출 수 · 클릭 수 · 클릭률</li>
@@ -645,7 +665,7 @@ footer a{color:#c9a9ff}
           <li>노출 수 1만 이상 · 게시물 영구 유지</li>
           <li>영업일 기준 11일차 결과 공유 (노출 수 · RT 수)</li>
         </ul>
-        <p class="note">이벤트 참여 독자에게 증정 가능한 리워드 제공 필요 · 출판사 별도 문의</p>
+        <p class="note">이벤트 참여 독자에게 증정할 리워드(상품 · 쿠폰 등)는 광고주가 제공합니다</p>
       </div>
     </div>
   </div>
@@ -833,16 +853,28 @@ const PRICES = {
 };
 
 /* ── ③ 레퍼런스(예시 콘텐츠) ───────────────────────────────── */
-/*  줄을 추가/삭제하거나 제목·링크만 바꾸면 됩니다.               */
+/*  줄을 추가/삭제하거나 제목·링크·조회수만 바꾸면 됩니다.        */
 /*  link 를 "" 로 비워두면 링크 없이 제목만 표시됩니다.           */
+/*  views 는 해당 글 페이지에 표시되는 조회 수 (비우면 배지 생략). */
 const REFERENCES = [
-  { type:"서비스 홍보",         title:"‘대체 불가 개발자’를 만드는 4가지 제미나이 활용법", link:"https://yozm.wishket.com/magazine/detail/2655/" },
-  { type:"프로덕트 TMI",        title:"48시간 만에 국내 여행 업계 최초 AI 서비스 만든 사연", link:"https://yozm.wishket.com/magazine/detail/1949/" },
-  { type:"개발 리더 인터뷰",    title:"정답 없는 일, 내가 ‘잘하고 있나’ 확신하는 법", link:"" },  // TODO: 게시물 URL 확인되면 채우기
-  { type:"팀 인터뷰",           title:"사용자 ‘감성’ 챙기는 프로덕트 브랜딩이란? (feat. 토스)", link:"https://yozm.wishket.com/magazine/detail/2235/" },
-  { type:"인사이트 (제휴)",     title:"프로그래밍 용어 ‘멱등성(Idempotent)’ 알아보기", link:"https://yozm.wishket.com/magazine/detail/2106/" },
-  { type:"제품 개발 과정 (제휴)", title:"쿠팡은 디자인 시스템을 어떻게 구축했을까?", link:"https://yozm.wishket.com/magazine/detail/2045/" },
-  { type:"자체 인터뷰 (제휴)",  title:"초거대 AI 시대, 대체불가 개발자로 살아남기", link:"https://yozm.wishket.com/magazine/detail/2477/" },
+  { type:"서비스 홍보",         title:"‘대체 불가 개발자’를 만드는 4가지 제미나이 활용법", link:"https://yozm.wishket.com/magazine/detail/2655/", views:"58.2K" },
+  { type:"프로덕트 TMI",        title:"48시간 만에 국내 여행 업계 최초 AI 서비스 만든 사연", link:"https://yozm.wishket.com/magazine/detail/1949/", views:"29.4K" },
+  { type:"개발 리더 인터뷰",    title:"정답 없는 일, 내가 ‘잘하고 있나’ 확신하는 법", link:"", views:"" },  // TODO: 게시물 URL 확인되면 채우기
+  { type:"팀 인터뷰",           title:"사용자 ‘감성’ 챙기는 프로덕트 브랜딩이란? (feat. 토스)", link:"https://yozm.wishket.com/magazine/detail/2235/", views:"17.9K" },
+  { type:"인사이트 (제휴)",     title:"프로그래밍 용어 ‘멱등성(Idempotent)’ 알아보기", link:"https://yozm.wishket.com/magazine/detail/2106/", views:"44.7K" },
+  { type:"제품 개발 과정 (제휴)", title:"쿠팡은 디자인 시스템을 어떻게 구축했을까?", link:"https://yozm.wishket.com/magazine/detail/2045/", views:"21.9K" },
+  { type:"자체 인터뷰 (제휴)",  title:"초거대 AI 시대, 대체불가 개발자로 살아남기", link:"https://yozm.wishket.com/magazine/detail/2477/", views:"29.6K" },
+];
+
+/* ── ③-1 광고 집행 브랜드 (매체 소개 탭에 표시) ───────────────── */
+/*  텍스트만 나열 — 추가/삭제 자유. 표기 제외 요청 시 여기서 지우면 됨. */
+const ADVERTISERS = [
+  "구글", "LG전자", "세일즈포스", "데이터브릭스", "스노우플레이크", "데이터독",
+  "KT 엔터프라이즈", "네이버커넥트", "NHN커머스", "크래프톤 정글", "웅진씽크빅(유데미)",
+  "가비아", "토스랩(잔디)", "메가존소프트", "구름", "엘리스그룹", "팀스파르타",
+  "인프랩", "모두의연구소", "멋쟁이사자처럼", "데이원컴퍼니", "라이너", "펜타시큐리티",
+  "영림원소프트랩", "아이티센클로잇", "에이비일팔공", "더플레이토(티로)",
+  "리더스시스템즈", "리오랩", "스위그", "딩코", "원츠넷",
 ];
 
 /* ── ④ 단독 eDM 실제 발송 사례 ─────────────────────────────── */
@@ -881,11 +913,16 @@ document.querySelectorAll("[data-price]").forEach(el => {
 // 레퍼런스 표를 렌더링
 const refBody = document.getElementById("refTableBody");
 if (refBody) refBody.innerHTML = REFERENCES.map(r => {
-  const cell = r.link
+  const title = r.link
     ? `<a class="art-link" href="${r.link}" target="_blank" rel="noopener">${r.title}</a>`
     : r.title;
-  return `<tr><td><strong>${r.type}</strong></td><td>${cell}</td></tr>`;
+  const views = r.views ? ` <span class="views-badge">👁 ${r.views}</span>` : "";
+  return `<tr><td><strong>${r.type}</strong></td><td>${title}${views}</td></tr>`;
 }).join("");
+
+// 광고 집행 브랜드 칩을 렌더링
+const advBox = document.getElementById("advertiserChips");
+if (advBox) advBox.innerHTML = ADVERTISERS.map(a => `<span class="adv-chip">${a}</span>`).join("");
 
 // 컬렉션 실제 사례 버튼을 렌더링
 const collBox = document.getElementById("collectionExamples");
