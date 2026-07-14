@@ -945,14 +945,24 @@ function activateTab(id, updateHash = true) {
   panels.forEach(p => p.classList.toggle("active", p.id === "panel-" + id));
   if (updateHash) history.replaceState(null, "", "#" + id);
 }
+// 탭 전환 후 탭 바가 화면 상단에 오도록 즉시 이동.
+// 주의 1: .tabs-outer는 sticky라 스크롤 중 offsetTop이 화면 위치를 반환 →
+//         sticky가 아닌 main 기준으로 고정 레이아웃 위치를 역산한다.
+// 주의 2: smooth로 하면 패널 전환으로 문서가 짧아질 때 애니메이션이
+//         취소되어 엉뚱한 위치에 남으므로 instant로 이동한다.
+function scrollToTabsTop() {
+  const mainEl = document.querySelector("main");
+  const tabsH = document.querySelector(".tabs-outer").offsetHeight;
+  window.scrollTo({ top: mainEl.offsetTop - tabsH - 60, behavior: "instant" });
+}
 tabButtons.forEach(btn => btn.addEventListener("click", () => {
   activateTab(btn.dataset.tab);
-  window.scrollTo({ top: document.querySelector(".tabs-outer").offsetTop - 60, behavior: "smooth" });
+  scrollToTabsTop();
 }));
 // 다른 탭으로 이동하는 칩 링크
 document.querySelectorAll("[data-goto]").forEach(el => el.addEventListener("click", () => {
   activateTab(el.dataset.goto);
-  window.scrollTo({ top: document.querySelector(".tabs-outer").offsetTop - 60, behavior: "smooth" });
+  scrollToTabsTop();
 }));
 // URL 해시로 진입 시 해당 탭 열기 (#banner 등)
 window.addEventListener("hashchange", () => activateTab(location.hash.slice(1), false));
