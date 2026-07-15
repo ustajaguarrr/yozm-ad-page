@@ -14,6 +14,7 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%2024%2024%27%3E%3Cpath%20fill-rule=%27evenodd%27%20clip-rule=%27evenodd%27%20d=%27M7.87702%204C7.24578%204%206.66607%204.36093%206.36548%204.94107L1.08261%2015.1667C1.02606%2015.2753%200.997659%2015.3971%201.00015%2015.5204C1.00264%2015.6437%201.03594%2015.7642%201.09683%2015.8703C1.15772%2015.9764%201.24414%2016.0645%201.34772%2016.1261C1.4513%2016.1877%201.56854%2016.2206%201.68808%2016.2218H9.69022L11.3327%2013.042L8.81636%207.7964C8.79022%207.74206%208.77786%207.68178%208.78044%207.62118C8.78303%207.56058%208.80047%207.50164%208.83114%207.44989C8.86181%207.39813%208.90471%207.35524%208.95582%207.32522C9.00693%207.2952%209.06458%207.27905%209.1234%207.27825H11.0042C11.1322%207.27877%2011.2575%207.31616%2011.366%207.38619C11.4745%207.45622%2011.5619%207.55611%2011.6183%207.67461L12.8153%2010.1712L15.4583%205.054C15.5152%204.94566%2015.5439%204.82398%2015.5417%204.70081C15.5395%204.57764%2015.5064%204.45715%2015.4457%204.35106C15.3849%204.24497%2015.2986%204.15689%2015.1951%204.09537C15.0916%204.03386%2014.9745%204.001%2014.855%204H7.87702Z%27%20fill=%27%236A24E8%27/%3E%3Cpath%20fill-rule=%27evenodd%27%20clip-rule=%27evenodd%27%20d=%27M17.1396%207.27832L12.766%2015.8421C12.7081%2015.9561%2012.6211%2016.0518%2012.5144%2016.1187C12.4078%2016.1856%2012.2854%2016.2212%2012.1606%2016.2218H9.69036L8.5406%2018.4461C8.29476%2018.9222%208.62648%2019.5001%209.14607%2019.5001H16.123C16.7542%2019.5001%2017.3339%2019.1392%2017.6334%2018.559L22.9174%208.33343C22.9739%208.22488%2023.0023%208.10313%2022.9999%207.97995C22.9974%207.85677%2022.9642%207.73633%2022.9035%207.63025C22.8427%207.52417%2022.7564%207.43605%2022.653%207.3744C22.5496%207.31275%2022.4325%207.27966%2022.313%207.27832H17.1396Z%27%20fill=%27%236A24E8%27/%3E%3C/svg%3E">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <style>
 :root{
@@ -71,6 +72,9 @@ strong{font-weight:700}
 .tabs-outer{position:sticky;top:60px;z-index:40;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 2px 10px rgba(20,30,50,.04)}
 .tabs{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;padding:0 24px;max-width:1080px;margin:0 auto}
 .tabs::-webkit-scrollbar{display:none}
+/* 탭이 잘릴 때 우측 페이드로 "더 있음"을 표시 — 끝까지 스크롤하면 사라짐 */
+.tabs-outer::after{content:"";position:absolute;top:0;right:0;bottom:0;width:52px;background:linear-gradient(to left,#fff 18%,rgba(255,255,255,0));pointer-events:none;opacity:1;transition:opacity .25s}
+.tabs-outer.tabs-at-end::after{opacity:0}
 .tab-btn{flex-shrink:0;background:none;border:0;font:inherit;font-size:15px;font-weight:600;color:var(--ink-2);padding:16px 14px 13px;cursor:pointer;border-bottom:3px solid transparent;transition:all .15s;white-space:nowrap}
 .tab-btn:hover{color:var(--ink)}
 .tab-btn.active{color:var(--teal-dark);border-bottom-color:var(--teal);font-weight:800}
@@ -967,6 +971,16 @@ document.querySelectorAll("[data-goto]").forEach(el => el.addEventListener("clic
 // URL 해시로 진입 시 해당 탭 열기 (#banner 등)
 window.addEventListener("hashchange", () => activateTab(location.hash.slice(1), false));
 if (location.hash) activateTab(location.hash.slice(1), false);
+
+// 모바일에서 탭이 더 있음을 알리는 우측 페이드 — 끝까지 스크롤하면 숨김
+const tabsScroller = document.querySelector(".tabs");
+function updateTabsFade() {
+  const atEnd = tabsScroller.scrollLeft + tabsScroller.clientWidth >= tabsScroller.scrollWidth - 4;
+  document.querySelector(".tabs-outer").classList.toggle("tabs-at-end", atEnd);
+}
+tabsScroller.addEventListener("scroll", updateTabsFade, { passive: true });
+window.addEventListener("resize", updateTabsFade);
+updateTabsFade();
 
 /* ── 웹 배너 상품 정보 (금액은 위 PRICES에서 자동으로 가져옴) ── */
 /*  shot: 배너가 실제로 노출된 "전체 화면" 캡처.
